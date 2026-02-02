@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Minha Fruteira</title>
+  <title>Fruteira - PDV</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🍎 Fruteira Online</h1>
-  <p>Sistema funcionando pelo navegador</p>
+
+<h1>🍉 PDV da Fruteira</h1>
+
+<section>
+  <h2>Cadastro de Produto</h2>
+  <input id="nomeProduto" placeholder="Nome do produto">
+  <input id="precoKg" type="number" step="0.01" placeholder="Preço por Kg">
+  <button onclick="cadastrarProduto()">Cadastrar</button>
+</section>
+
+<section>
+  <h2>Venda</h2>
+  <select id="produtoSelect"></select>
+  <input id="peso" type="number" step="0.001" placeholder="Peso (Kg)">
+  <button onclick="adicionarCarrinho()">Adicionar</button>
+</section>
+
+<section>
+  <h2>Carrinho</h2>
+  <ul id="carrinho"></ul>
+  <h3>Total: R$ <span id="total">0.00</span></h3>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
